@@ -15,7 +15,6 @@
     <script src="script.js"></script>
     <script>
       window.addEventListener("load", function() {
-        // 3500ms (3.5 sec) baad button dikhayein with fade-in effect
         setTimeout(function(){
           let btn = document.getElementById("myAnimatedBtn");
           btn.style.display = "block";
@@ -23,9 +22,10 @@
         }, 3500);
       });
 
-      // Button click par link open hoga
+      // Button click par link same tab me open hoga
       document.getElementById('myAnimatedBtn').onclick = function() {
-        window.open('https://example.com', '_blank'); // Yahan apna desired link daalein
+        window.open('https://example.com', '_self');
+        // Ya alternatively: window.location.href = 'https://example.com';
       };
     </script>
   </body>
