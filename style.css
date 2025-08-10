@@ -1,0 +1,79 @@
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+p {
+  margin: 0 0;
+  position: absolute;
+  font: 16px Verdana;
+  color: #eee;
+  height: 25px;
+  top: calc(100vh - 30px);
+  text-shadow: 0 0 2px white;
+}
+
+p a {
+  text-decoration: none;
+  color: #aaa;
+}
+
+span {
+  font-size: 11px;
+}
+
+p > a:first-of-type {
+  font-size: 20px;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* 🔹 Animated Button Styling */
+#myAnimatedBtn {
+  display: none; /* Shuru me hidden */
+  opacity: 0; /* Fade-in effect ke liye */
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  padding: 15px 35px;
+  background: linear-gradient(90deg, #ff6a00, #ee0979, #ff6a00, #ee0979);
+  background-size: 200% 200%;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  font-family: inherit;
+  cursor: pointer;
+  animation: gradientMove 3s ease-in-out infinite, btnGlow 1.8s ease-in-out infinite alternate;
+  z-index: 10;
+  transition: opacity 0.8s ease;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes btnGlow {
+  0% {
+    box-shadow: 0 0 16px 3px #ee097966;
+  }
+  100% {
+    box-shadow: 0 0 32px 8px #ee0979cc;
+  }
+}
+
+#myAnimatedBtn:hover {
+  box-shadow: 0 0 44px 12px #ff6a00cc;
+}

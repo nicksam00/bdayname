@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Happy Birthday Animation</title>
+  </head>
+  <body>
+    <canvas id="c"></canvas>
+
+    <!-- Animated Button -->
+    <button id="myAnimatedBtn">Click Me</button>
+
+    <script src="script.js"></script>
+    <script>
+      window.addEventListener("load", function() {
+        // 3500ms (3.5 sec) baad button dikhayein with fade-in effect
+        setTimeout(function(){
+          let btn = document.getElementById("myAnimatedBtn");
+          btn.style.display = "block";
+          setTimeout(() => { btn.style.opacity = "1"; }, 50);
+        }, 3500);
+      });
+
+      // Button click par link open hoga
+      document.getElementById('myAnimatedBtn').onclick = function() {
+        window.open('https://example.com', '_blank'); // Yahan apna desired link daalein
+      };
+    </script>
+  </body>
+</html>
